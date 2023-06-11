@@ -21,15 +21,14 @@ export function ContactForm({ onSubmit }) {
     }
   };
 
-  handleSubmit = event => {
+  const handleSubmit = event => {
     event.preventDefault();
-    this.props.onSubmit(this.state.name, this.state.number);
-
-    this.setState({ name: '', number: '' });
+    onSubmit(name, number);
+    setName('');
+    setNumber('');
   };
 
-  render() {
-    return (
+  return (
       <>
         <Form onSubmit={this.handleSubmit}>
           <label htmlFor="inputName">Name</label>
