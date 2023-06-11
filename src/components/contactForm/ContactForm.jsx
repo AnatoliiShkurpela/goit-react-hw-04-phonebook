@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Input, Form, Button } from 'components/contactForm/ContactForm.styled';
 
-export class ContactForm extends Component {
-  state = {
-    name: '',
-    number: '',
-  };
+export function ContactForm({ onSubmit }) {
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+
 
   handleChange = ({ target }) => {
     this.setState({
