@@ -22,6 +22,3 @@ ContactList.propTypes = {
   filtredContacts: PropTypes.array.isRequired,
 };
 
-
-
-
