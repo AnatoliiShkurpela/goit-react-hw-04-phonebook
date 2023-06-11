@@ -68,16 +68,15 @@ export class App extends Component {
 
     return (
       <Wrapper>
-        <Header>Phonebook</Header>
-        <ContactForm onSubmit={this.addContact} />
+      <Header>Phonebook</Header>
+      <ContactForm onSubmit={addContact} />
 
-        <h2>Contacts</h2>
-        <Filter value={this.state.filter} onChange={this.changeFilter} />
-        <ContactList
-          filtredContacts={filtredContacts}
-          onDeleteContact={this.deleteContact}
-        />
-      </Wrapper>
-    );
-  }
+      <h2>Contacts</h2>
+      <Filter value={filter} onChange={changeFilter} />
+      <ContactList
+        filtredContacts={filtredContacts}
+        onDeleteContact={deleteContact}
+      />
+    </Wrapper>
+  );
 }
